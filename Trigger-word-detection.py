@@ -18,3 +18,6 @@ IPython.display.Audio("./raw_data/backgrounds/1.wav")
 
 
 IPython.display.Audio("audio_examples/example_train.wav")
+
+
+xx  ==  graph_spectrogramgraph_s ("audio_examples/example_train.wav")
