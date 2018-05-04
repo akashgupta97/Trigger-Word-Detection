@@ -20,4 +20,9 @@ IPython.display.Audio("./raw_data/backgrounds/1.wav")
 IPython.display.Audio("audio_examples/example_train.wav")
 
 
-xx  ==  graph_spectrogramgraph_s ("audio_examples/example_train.wav")
+x =graph_spectrogram("audio_examples/example_train.wav")
+
+
+__,,  datadata  ==  wavfilewavfile.read("audio_examples/example_train.wav")
+print("Time steps in audio recording before spectrogram", data[:,0].shape)
+print("Time steps in input after spectrogram", x.shape)
