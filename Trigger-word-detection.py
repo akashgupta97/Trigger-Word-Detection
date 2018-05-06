@@ -29,3 +29,7 @@ print("Time steps in input after spectrogram", x.shape)
 
 Tx = 5511 # The number of time steps input to the model from the spectrogram
 n_freq = 101 # Number of frequencies input to the model at each time step of the spectrogram
+
+
+
+TyTy  ==  13751375  # The number of time steps in the output of our model# The n
