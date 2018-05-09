@@ -41,3 +41,9 @@ print("background len: " + str(len(backgrounds[0])))    # Should be 10,000, sinc
 print("activate[0] len: " + str(len(activates[0])))     # Maybe around 1000, since an "activate" audio clip is usually around 1 sec (but varies a lot)
 print("activate[1] len: " + str(len(activates[1])))     # Different "activate" clips can have different lengths
 
+'''
+background len: 10000
+activate[0] len: 916
+activate[1] len: 1579
+'''
+
