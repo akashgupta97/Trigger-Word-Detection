@@ -47,3 +47,14 @@ activate[0] len: 916
 activate[1] len: 1579
 '''
 
+
+def get_random_time_segment(segment_ms):
+    """
+    Gets a random time segment of duration segment_ms in a 10,000 ms audio clip.
+
+    Arguments:
+    segment_ms -- the duration of the audio clip in ms ("ms" stands for "milliseconds")
+
+    Returns:
+    segment_time -- a tuple of (segment_start, segment_end) in ms
+    """
