@@ -58,3 +58,10 @@ def get_random_time_segment(segment_ms):
     Returns:
     segment_time -- a tuple of (segment_start, segment_end) in ms
     """
+
+
+segment_start = np.random.randint(low=0,
+                                  high=10000 - segment_ms)  # Make sure segment doesn't run past the 10sec background
+segment_end = segment_start + segment_ms - 1
+
+return (segment_start, segment_end)
