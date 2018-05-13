@@ -65,3 +65,19 @@ segment_start = np.random.randint(low=0,
 segment_end = segment_start + segment_ms - 1
 
 return (segment_start, segment_end)
+
+
+# GRADED FUNCTION: is_overlapping
+
+def is_overlapping(segment_time, previous_segments):
+    """
+    Checks if the time of a segment overlaps with the times of existing segments.
+
+    Arguments:
+    segment_time -- a tuple of (segment_start, segment_end) for the new segment
+    previous_segments -- a list of tuples of (segment_start, segment_end) for the existing segments
+
+    Returns:
+    True if the time segment overlaps with any of the existing segments, False otherwise
+    """
+    
