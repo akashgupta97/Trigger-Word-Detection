@@ -107,3 +107,19 @@ Overlap 1 =  False
 Overlap 2 =  True
 '''
 
+
+# GRADED FUNCTION: insert_audio_clip
+
+def insert_audio_clip(background, audio_clip, previous_segments):
+    """
+    Insert a new audio segment over the background noise at a random time step, ensuring that the
+    audio segment does not overlap with existing segments.
+
+    Arguments:
+    background -- a 10 second background audio recording.
+    audio_clip -- the audio clip to be inserted/overlaid.
+    previous_segments -- times where audio segments have already been placed
+
+    Returns:
+    new_background -- the updated background audio
+    """
