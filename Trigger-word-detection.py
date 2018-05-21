@@ -135,3 +135,12 @@ def insert_audio_clip(background, audio_clip, previous_segments):
     # picking new segment_time at random until it doesn't overlap. (≈ 2 lines)
     while is_overlapping(segment_time, previous_segments):
         segment_time = get_random_time_segment(segment_ms)
+
+        # Step 3: Add the new segment_time to the list of previous_segments (≈ 1 line)
+        previous_segments.append(segment_time)
+        ### END CODE HERE ###
+
+        # Step 4: Superpose audio segment and background
+        new_background = background.overlay(audio_clip, position=segment_time[0])
+
+        return new_background, segment_time
