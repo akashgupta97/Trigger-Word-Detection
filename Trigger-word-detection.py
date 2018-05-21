@@ -123,3 +123,15 @@ def insert_audio_clip(background, audio_clip, previous_segments):
     Returns:
     new_background -- the updated background audio
     """
+    # Get the duration of the audio clip in ms
+    segment_ms = len(audio_clip)
+
+    ### START CODE HERE ###
+    # Step 1: Use one of the helper functions to pick a random time segment onto which to insert
+    # the new audio clip. (≈ 1 line)
+    segment_time = get_random_time_segment(segment_ms)
+
+    # Step 2: Check if the new segment_time overlaps with one of the previous_segments. If so, keep
+    # picking new segment_time at random until it doesn't overlap. (≈ 2 lines)
+    while is_overlapping(segment_time, previous_segments):
+        segment_time = get_random_time_segment(segment_ms)
