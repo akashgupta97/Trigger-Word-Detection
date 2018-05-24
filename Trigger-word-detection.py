@@ -144,3 +144,9 @@ def insert_audio_clip(background, audio_clip, previous_segments):
         new_background = background.overlay(audio_clip, position=segment_time[0])
 
         return new_background, segment_time
+
+    np.random.seed(5)
+    audio_clip, segment_time = insert_audio_clip(backgrounds[0], activates[0], [(3790, 4400)])
+    audio_clip.export("insert_test.wav", format="wav")
+    print("Segment Time: ", segment_time)
+    IPython.display.Audio("insert_test.wav")
