@@ -150,3 +150,7 @@ def insert_audio_clip(background, audio_clip, previous_segments):
     audio_clip.export("insert_test.wav", format="wav")
     print("Segment Time: ", segment_time)
     IPython.display.Audio("insert_test.wav")
+
+    '''
+    Segment Time:  (2254, 3169)
+    '''
