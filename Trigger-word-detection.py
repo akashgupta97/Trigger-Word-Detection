@@ -154,3 +154,6 @@ def insert_audio_clip(background, audio_clip, previous_segments):
     '''
     Segment Time:  (2254, 3169)
     '''
+
+    # Expected audio
+    IPython.display.Audio("audio_examples/insert_reference.wav")
