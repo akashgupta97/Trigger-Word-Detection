@@ -174,3 +174,15 @@ def insert_audio_clip(background, audio_clip, previous_segments):
         Returns:
         y -- updated labels
         """
+
+        # duration of the background (in terms of spectrogram time-steps)
+        segment_end_y = int(segment_end_ms * Ty / 10000.0)
+
+        # Add 1 to the correct index in the background label (y)
+        ### START CODE HERE ### (≈ 3 lines)
+        for i in range(segment_end_y + 1, segment_end_y + 51):
+            if i < Ty:
+                y[0, i] = 1.0
+        ### END CODE HERE ###
+
+        return y
