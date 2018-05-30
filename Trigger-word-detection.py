@@ -186,3 +186,7 @@ def insert_audio_clip(background, audio_clip, previous_segments):
         ### END CODE HERE ###
 
         return y
+
+    arr1 = insert_ones(np.zeros((1, Ty)), 9700)
+    plt.plot(insert_ones(arr1, 4251)[0, :])
+    print("sanity checks:", arr1[0][1333], arr1[0][634], arr1[0][635])
