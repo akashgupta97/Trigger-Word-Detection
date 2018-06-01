@@ -190,3 +190,19 @@ def insert_audio_clip(background, audio_clip, previous_segments):
     arr1 = insert_ones(np.zeros((1, Ty)), 9700)
     plt.plot(insert_ones(arr1, 4251)[0, :])
     print("sanity checks:", arr1[0][1333], arr1[0][634], arr1[0][635])
+
+    # GRADED FUNCTION: create_training_example
+
+    def create_training_example(background, activates, negatives):
+        """
+        Creates a training example with a given background, activates, and negatives.
+
+        Arguments:
+        background -- a 10 second background audio recording
+        activates -- a list of audio segments of the word "activate"
+        negatives -- a list of audio segments of random words that are not "activate"
+
+        Returns:
+        x -- the spectrogram of the training example
+        y -- the label at each time step of the spectrogram
+        """
