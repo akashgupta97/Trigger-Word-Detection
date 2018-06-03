@@ -206,3 +206,32 @@ def insert_audio_clip(background, audio_clip, previous_segments):
         x -- the spectrogram of the training example
         y -- the label at each time step of the spectrogram
         """
+        # Set the random seed
+        np.random.seed(18)
+
+        # Make background quieter
+        background = background - 20
+
+        ### START CODE HERE ###
+        # Step 1: Initialize y (label vector) of zeros (≈ 1 line)
+        y = np.zeros((1, Ty))
+
+        # Step 2: Initialize segment times as empty list (≈ 1 line)
+        previous_segments = []
+        ### END CODE HERE ###
+
+        # Select 0-4 random "activate" audio clips from the entire list of "activates" recordings
+        number_of_activates = np.random.randint(0, 5)
+        random_indices = np.random.randint(len(activates), size=number_of_activates)
+        random_activates = [activates[i] for i in random_indices]
+
+        ### START CODE HERE ### (≈ 3 lines)
+        # Step 3: Loop over randomly selected "activate" clips and insert in background
+        for random_activate in random_activates:
+            # Insert the audio clip on the background
+            background, segment_time = insert_audio_clip(background, random_activate, previous_segments)
+            # Retrieve segment_start and segment_end from segment_time
+            segment_start, segment_end = segment_time
+            # Insert labels in "y"
+            y = insert_ones(y, segment_end)
+            ### END CODE HERE ###
