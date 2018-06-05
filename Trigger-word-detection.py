@@ -235,3 +235,15 @@ def insert_audio_clip(background, audio_clip, previous_segments):
             # Insert labels in "y"
             y = insert_ones(y, segment_end)
             ### END CODE HERE ###
+
+            # Select 0-2 random negatives audio recordings from the entire list of "negatives" recordings
+            number_of_negatives = np.random.randint(0, 3)
+            random_indices = np.random.randint(len(negatives), size=number_of_negatives)
+            random_negatives = [negatives[i] for i in random_indices]
+
+            ### START CODE HERE ### (≈ 2 lines)
+            # Step 4: Loop over randomly selected negative clips and insert in background
+            for random_negative in random_negatives:
+                # Insert the audio clip on the background
+                background, _ = insert_audio_clip(background, random_negative, previous_segments)
+                ### END CODE HERE ###
