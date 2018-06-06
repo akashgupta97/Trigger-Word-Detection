@@ -247,3 +247,14 @@ def insert_audio_clip(background, audio_clip, previous_segments):
                 # Insert the audio clip on the background
                 background, _ = insert_audio_clip(background, random_negative, previous_segments)
                 ### END CODE HERE ###
+                # Standardize the volume of the audio clip
+            background = match_target_amplitude(background, -20.0)
+
+            # Export new training example
+            file_handle = background.export("train" + ".wav", format="wav")
+            print("File (train.wav) was saved in your directory.")
+
+            # Get and plot spectrogram of the new recording (background with superposition of positive and negatives)
+            x = graph_spectrogram("train.wav")
+
+            return x, y
