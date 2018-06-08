@@ -258,3 +258,6 @@ def insert_audio_clip(background, audio_clip, previous_segments):
             x = graph_spectrogram("train.wav")
 
             return x, y
+
+        x, y = create_training_example(backgrounds[0], activates, negatives)
+        
