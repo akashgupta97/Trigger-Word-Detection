@@ -260,4 +260,5 @@ def insert_audio_clip(background, audio_clip, previous_segments):
             return x, y
 
         x, y = create_training_example(backgrounds[0], activates, negatives)
-        
+
+        IPython.display.Audio("train.wav")
