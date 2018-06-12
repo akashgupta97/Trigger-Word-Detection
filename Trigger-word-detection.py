@@ -264,3 +264,5 @@ def insert_audio_clip(background, audio_clip, previous_segments):
         IPython.display.Audio("train.wav")
 
         IPython.display.Audio("audio_examples/train_reference.wav")
+
+        plt.plot(y[0])
