@@ -266,3 +266,7 @@ def insert_audio_clip(background, audio_clip, previous_segments):
         IPython.display.Audio("audio_examples/train_reference.wav")
 
         plt.plot(y[0])
+
+        # Load preprocessed training examples
+        X = np.load("./XY_train/X.npy")
+        Y = np.load("./XY_train/Y.npy")
