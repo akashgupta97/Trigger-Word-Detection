@@ -270,3 +270,7 @@ def insert_audio_clip(background, audio_clip, previous_segments):
         # Load preprocessed training examples
         X = np.load("./XY_train/X.npy")
         Y = np.load("./XY_train/Y.npy")
+
+        # Load preprocessed dev set examples
+        X_dev = np.load("./XY_dev/X_dev.npy")
+        Y_dev = np.load("./XY_dev/Y_dev.npy")
