@@ -7,6 +7,12 @@ import os
 import glob
 import IPython
 from td_utils import *
+from keras.callbacks import ModelCheckpoint
+from keras.models import Model, load_model, Sequential
+from keras.layers import Dense, Activation, Dropout, Input, Masking, TimeDistributed, LSTM, Conv1D
+from keras.layers import GRU, Bidirectional, BatchNormalization, Reshape
+from keras.optimizers import Adam
+
 %matplotlib inline
 
 
@@ -274,3 +280,7 @@ def insert_audio_clip(background, audio_clip, previous_segments):
         # Load preprocessed dev set examples
         X_dev = np.load("./XY_dev/X_dev.npy")
         Y_dev = np.load("./XY_dev/Y_dev.npy")
+
+        # Building the model
+
+
