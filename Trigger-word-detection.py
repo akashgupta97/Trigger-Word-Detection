@@ -283,4 +283,15 @@ def insert_audio_clip(background, audio_clip, previous_segments):
 
         # Building the model
 
+        # GRADED FUNCTION: model
 
+        def model(input_shape):
+            """
+            Function creating the model's graph in Keras.
+
+            Argument:
+            input_shape -- shape of the model's input data (using Keras conventions)
+
+            Returns:
+            model -- Keras model instance
+            """
