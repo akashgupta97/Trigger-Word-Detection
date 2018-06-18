@@ -295,3 +295,14 @@ def insert_audio_clip(background, audio_clip, previous_segments):
             Returns:
             model -- Keras model instance
             """
+
+            X_input = Input(shape=input_shape)
+
+            ### START CODE HERE ###
+
+            # Step 1: CONV layer (≈4 lines)
+            X = Conv1D(196, 15, strides=4)(X_input)  # CONV1D
+            X = BatchNormalization()(X)  # Batch normalization
+            X = Activation('relu')(X)  # ReLu activation
+            X = Dropout(0.8)(X)  # dropout (use 0.8)
+
