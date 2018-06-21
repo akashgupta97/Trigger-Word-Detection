@@ -306,3 +306,13 @@ def insert_audio_clip(background, audio_clip, previous_segments):
             X = Activation('relu')(X)  # ReLu activation
             X = Dropout(0.8)(X)  # dropout (use 0.8)
 
+            # Step 2: First GRU Layer (≈4 lines)
+            X = GRU(units=128, return_sequences=True)(X)  # GRU (use 128 units and return the sequences)
+            X = Dropout(0.8)(X)  # dropout (use 0.8)
+            X = BatchNormalization()(X)  # Batch normalization
+
+            # Step 3: Second GRU Layer (≈4 lines)
+            X = GRU(units=128, return_sequences=True)(X)  # GRU (use 128 units and return the sequences)
+            X = Dropout(0.8)(X)  # dropout (use 0.8)
+            X = BatchNormalization()(X)  # Batch normalization
+            X = Dropout(0.8)(X)  # dropout (use 0.8)
