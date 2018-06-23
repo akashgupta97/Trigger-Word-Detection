@@ -316,3 +316,12 @@ def insert_audio_clip(background, audio_clip, previous_segments):
             X = Dropout(0.8)(X)  # dropout (use 0.8)
             X = BatchNormalization()(X)  # Batch normalization
             X = Dropout(0.8)(X)  # dropout (use 0.8)
+
+            # Step 4: Time-distributed dense layer (≈1 line)
+            X = TimeDistributed(Dense(1, activation="sigmoid"))(X)  # time distributed  (sigmoid)
+
+            ### END CODE HERE ###
+
+            model = Model(inputs=X_input, outputs=X)
+
+            return model
