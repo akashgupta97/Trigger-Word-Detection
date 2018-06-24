@@ -325,3 +325,5 @@ def insert_audio_clip(background, audio_clip, previous_segments):
             model = Model(inputs=X_input, outputs=X)
 
             return model
+
+        model = model(input_shape=(Tx, n_freq))
