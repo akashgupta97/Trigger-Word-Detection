@@ -366,3 +366,5 @@ Trainable params: 521,657
 Non-trainable params: 904
 _________________________________________________________________
         '''
+
+model = load_model('./models/tr_model.h5')
