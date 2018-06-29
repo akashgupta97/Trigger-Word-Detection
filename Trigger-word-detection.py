@@ -368,3 +368,13 @@ _________________________________________________________________
         '''
 
 model = load_model('./models/tr_model.h5')
+
+opt = Adam(lr=0.0001, beta_1=0.9, beta_2=0.999, decay=0.01)
+model.compile(loss='binary_crossentropy', optimizer=opt, metrics=["accuracy"])
+
+model.fit(X, Y, batch_size = 5, epochs=1)
+
+'''
+Epoch 1/1
+26/26 [==============================] - 23s - loss: 0.0727 - acc: 0.9806    
+'''
