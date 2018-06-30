@@ -378,3 +378,14 @@ model.fit(X, Y, batch_size = 5, epochs=1)
 Epoch 1/1
 26/26 [==============================] - 23s - loss: 0.0727 - acc: 0.9806    
 '''
+
+
+
+lossloss,,  accacc  ==  modelmodel..evaluateevaluate(X_dev, Y_dev)
+print("Dev set accuracy = ", acc)
+
+'''
+
+25/25 [==============================] - 4s
+Dev set accuracy =  0.94600725174
+'''
