@@ -429,3 +429,12 @@ def chime_on_activate(filename, predictions, threshold):
             consecutive_timesteps = 0
 
     audio_clip.export("chime_output.wav", format='wav')
+
+    IPython.display.Audio("./raw_data/dev/1.wav")
+
+    IPython.display.Audio("./raw_data/dev/2.wav")
+
+    filename = "./raw_data/dev/1.wav"
+    prediction = detect_triggerword(filename)
+    chime_on_activate(filename, prediction, 0.5)
+    IPython.display.Audio("./chime_output.wav") 
