@@ -437,4 +437,9 @@ def chime_on_activate(filename, predictions, threshold):
     filename = "./raw_data/dev/1.wav"
     prediction = detect_triggerword(filename)
     chime_on_activate(filename, prediction, 0.5)
-    IPython.display.Audio("./chime_output.wav") 
+    IPython.display.Audio("./chime_output.wav")
+
+    filename = "./raw_data/dev/2.wav"
+    prediction = detect_triggerword(filename)
+    chime_on_activate(filename, prediction, 0.5)
+    IPython.display.Audio("./chime_output.wav")
