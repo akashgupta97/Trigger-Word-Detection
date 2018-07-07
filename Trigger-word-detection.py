@@ -457,3 +457,8 @@ def chime_on_activate(filename, predictions, threshold):
         segment = segment.set_frame_rate(44100)
         # Export as wav
         segment.export(filename, format='wav')
+
+your_filename = "audio_examples/my_audio.wav"
+
+preprocess_audio(your_filename)
+IPython.display.Audio(your_filename) # listen to the audio you uploaded
