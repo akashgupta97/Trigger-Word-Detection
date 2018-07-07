@@ -462,3 +462,9 @@ your_filename = "audio_examples/my_audio.wav"
 
 preprocess_audio(your_filename)
 IPython.display.Audio(your_filename) # listen to the audio you uploaded
+
+
+chime_threshold = 0.5
+prediction = detect_triggerword(your_filename)
+chime_on_activate(your_filename, prediction, chime_threshold)
+IPython.display.Audio("./chime_output.wav")
